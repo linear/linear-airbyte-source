@@ -1,0 +1,19 @@
+{
+  "documentationUrl": "https://developers.linear.app/docs/",
+  "connectionSpecification": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Linear Spec",
+    "type": "object",
+    "required": [
+      "token"
+    ],
+    "additionalProperties": false,
+    "properties": {
+      "token": {
+        "type": "string",
+        "title": "Personal User API Token",
+        "airbyte_secret": true
+      }
+    }
+  }
+}
