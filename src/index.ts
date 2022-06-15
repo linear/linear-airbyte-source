@@ -7,6 +7,7 @@ import {
   AirbyteSourceRunner,
   AirbyteSpec,
   AirbyteStreamBase,
+  Spec,
 } from "faros-airbyte-cdk";
 import VError from "verror";
 
@@ -19,14 +20,17 @@ export function mainCommand(): Command {
   return new AirbyteSourceRunner(logger, source).mainCommand();
 }
 
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const spec: Spec = require("../resources/spec.json");
+
 /** Example source implementation. */
 class ExampleSource extends AirbyteSourceBase {
-  async spec(): Promise<AirbyteSpec> {
-    return new AirbyteSpec(require("../resources/spec.json"));
+  public async spec(): Promise<AirbyteSpec> {
+    return new AirbyteSpec(spec);
   }
-  async checkConnection(config: AirbyteConfig): Promise<[boolean, VError]> {
+  public async checkConnection(config: AirbyteConfig): Promise<[boolean, VError]> {
     try {
-      await axios.get<any[]>("https://24454957ce48.ngrok.io/export/organization", {
+      await axios.get<unknown[]>("https://24454957ce48.ngrok.io/export/organization", {
         headers: { Authorization: config.token },
       });
       return [true, null];
@@ -34,7 +38,7 @@ class ExampleSource extends AirbyteSourceBase {
       return [false, new VError(err)];
     }
   }
-  streams(config: AirbyteConfig): AirbyteStreamBase[] {
+  public streams(config: AirbyteConfig): AirbyteStreamBase[] {
     return [new Team(this.logger, config), new Organization(this.logger, config), new Issue(this.logger, config)];
   }
 }
