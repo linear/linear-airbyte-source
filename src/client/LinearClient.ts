@@ -16,7 +16,7 @@ export type EntityType = "issue" | "organization";
 
 const LINEAR_API_BASE_URL = "https://api.linear.app/export";
 /**
- * Thin client on top of the rest export api to fetch different resources
+ * Thin client on top of the rest export api to fetch different resources.
  */
 export class LinearClient {
   public constructor(private readonly config: Config) {}
