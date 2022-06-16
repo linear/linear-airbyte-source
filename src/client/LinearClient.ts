@@ -9,6 +9,9 @@ export type Config = {
   apiToken: string;
 };
 
+/*
+ * The supported entity types.
+ */
 export type EntityType = "issue" | "organization";
 
 const LINEAR_API_BASE_URL = "https://api.linear.app/export";
