@@ -67,50 +67,7 @@ const typescriptRules = {
   "@typescript-eslint/ban-ts-comment": "off",
   "@typescript-eslint/no-non-null-assertion": "off",
   "@typescript-eslint/restrict-plus-operands": "off",
-  "@typescript-eslint/no-namespace": "off",
-  "@typescript-eslint/tslint/config": [
-    "error",
-    {
-      rules: {
-        ban: [
-          true,
-          "eval",
-          {
-            name: "getConnection",
-            message: "Deadlock possibility! Use context-based db operations instead",
-          },
-          {
-            name: "getRepository",
-            message: "Deadlock possibility! Use context-based db operations instead",
-          },
-          {
-            name: ["ContextRunner", "createContext"],
-            message: "Deadlock possibility! See Context.ts how to obtain a context",
-          },
-          {
-            name: ["ContextRunner", "runAnonymousContext"],
-            message: "Deadlock possibility! See Context.ts how to obtain a context",
-          },
-          {
-            name: ["ContextRunner", "runOrganizationContext"],
-            message: "Deadlock possibility! Use withOrganizationContext instead",
-          },
-          {
-            name: ["ContextRunner", "runUserContext"],
-            message: "Deadlock possibility! Use withOrganizationContext instead",
-          },
-          {
-            name: ["ContextRunner", "runTransaction"],
-            message: "Deadlock possibility! Use withTxOrganizationContext instead",
-          },
-          {
-            name: ["*", "where"],
-            message: "Use `andWhere` instead to not accidentally override previous conditions",
-          },
-        ],
-      },
-    },
-  ],
+  "@typescript-eslint/no-namespace": "off"
 };
 const generalRules = {
   "prefer-spread": "off", // TODO: enable
