@@ -3,7 +3,10 @@ import { Dictionary } from "ts-essentials";
 import { LinearClient } from "../client/LinearClient";
 import { Issue as IssueModel } from "../client/types";
 export class Issue extends AirbyteStreamBase {
-  public constructor(protected readonly logger: AirbyteLogger, private readonly client: LinearClient) {
+  public constructor(
+    protected readonly logger: AirbyteLogger,
+    private readonly client: LinearClient
+  ) {
     super(logger);
   }
 
