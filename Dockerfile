@@ -1,4 +1,5 @@
-FROM node:16-alpine
+FROM launcher.gcr.io/google/nodejs
+RUN install_node v16.13
 
 WORKDIR /home/node/airbyte
 RUN npm install -g npm@7 tsc
