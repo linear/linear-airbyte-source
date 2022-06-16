@@ -1,0 +1,89 @@
+{
+  "name": "linear-airbyte-source",
+  "version": "0.1.0",
+  "description": "Linear Airbyte source",
+  "keywords": [
+    "airbyte",
+    "source",
+    "faros",
+    "linear"
+  ],
+  "author": "Linear Orbit Inc.",
+  "license": "MIT",
+  "files": [
+    "lib/",
+    "resources/"
+  ],
+  "engines": {
+    "node": ">=16.5"
+  },
+  "main": "./lib",
+  "scripts": {
+    "build": "tsc -p src",
+    "lint-staged": "lint-staged",
+    "clean": "rm -rf lib node_modules lib",
+    "fix": "prettier --write 'src/**/*.ts' && npm run lint -- --fix",
+    "lint": "eslint 'src/**/*.ts' 'test/**/*.ts'",
+    "watch": "tsc -b -w src test",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "axios": "0.26.0",
+    "commander": "9.0.0",
+    "faros-airbyte-cdk": "0.1.84",
+    "ts-essentials": "9.1.2",
+    "verror": "1.10.1"
+  },
+  "jest": {
+    "coverageDirectory": "out/coverage",
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/node_modules/",
+      "<rootDir>/test/"
+    ],
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "testPathIgnorePatterns": [
+      ".d.ts",
+      ".js"
+    ],
+    "testTimeout": 10000,
+    "globals": {
+      "ts-jest": {
+        "tsconfig": "test/tsconfig.json"
+      }
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx,json,css,yaml}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.{ts,tsx}": [
+      "eslint --max-warnings 0 --fix -c .eslintrc.precommit.json",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "@types/jest": "28.1.1",
+    "@types/node": "16.11.7",
+    "@types/verror": "^1.10.5",
+    "@typescript-eslint/eslint-plugin": "5.28.0",
+    "@typescript-eslint/eslint-plugin-tslint": "5.4.0",
+    "@typescript-eslint/parser": "5.4.0",
+    "eslint": "8.15.0",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-plugin-import": "2.26.0",
+    "eslint-plugin-jsdoc": "39.2.9",
+    "eslint-plugin-no-null": "1.0.2",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-prefer-arrow": "1.2.3",
+    "eslint-plugin-prettier": "4.0.0",
+    "eslint-plugin-react": "7.29.4",
+    "eslint-plugin-react-hooks": "4.5.0",
+    "husky": "7.0.4",
+    "lint-staged": "13.0.1",
+    "prettier": "2.6.2",
+    "ts-jest": "28.0.4",
+    "typescript": "4.7.3"
+  }
+}

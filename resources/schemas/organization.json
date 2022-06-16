@@ -1,0 +1,69 @@
+{
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "createdAt": {
+      "type": "string",
+      "airbyte_type": "timestamp_with_timezone"
+    },
+    "updatedAt": {
+      "type": "string",
+      "airbyte_type": "timestamp_with_timezone"
+    },
+    "archivedAt": {
+      "type": ["null", "string"],
+      "airbyte_type": "timestamp_with_timezone"
+    },
+    "name": {
+      "type": "string"
+    },
+    "urlKey": {
+      "type": "string"
+    },
+    "logoUrl": {
+      "type": "string"
+    },
+    "periodUploadVolume": {
+      "type": "integer"
+    },
+    "gitBranchFormat": {
+      "type": ["null", "string"]
+    },
+    "gitLinkbackMessagesEnabled": {
+      "type": "boolean"
+    },
+    "gitPublicLinkbackMessagesEnabled": {
+      "type": "boolean"
+    },
+    "roadmapEnabled": {
+      "type": "boolean"
+    },
+    "samlEnabled": {
+      "type": "boolean"
+    },
+    "allowedAuthServices": {
+      "type": "array",
+      "items": {}
+    },
+    "deletionRequestedAt": {
+      "type": ["null", "string"],
+      "airbyte_type": "timestamp_with_timezone"
+    },
+    "reducedPersonalInformation": {
+      "type": "boolean"
+    },
+    "enabled": {
+      "type": "boolean"
+    },
+    "deletionRequestedById": {
+      "type": ["null", "string"]
+    },
+    "serviceId": {
+      "type": "string"
+    },
+    "linearPreviewFlags": {
+      "type": "object"
+    }
+  }
+}
