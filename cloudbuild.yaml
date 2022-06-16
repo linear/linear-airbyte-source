@@ -4,7 +4,7 @@ steps:
     args:
       - "-c"
       - |
-        docker pull gcr.io/${PROJECT_ID}/linear-airbyte-source:latest
+        docker pull gcr.io/${PROJECT_ID}/linear-airbyte-source:latest || true
         docker build -t gcr.io/${PROJECT_ID}/linear-airbyte-source:$BUILD_ID -t gcr.io/${PROJECT_ID}/linear-airbyte-source:latest --cache-from gcr.io/${PROJECT_ID}/linear-airbyte-source:latest --build-arg BUILDKIT_INLINE_CACHE=1 -f Dockerfile .
         [[ "$BRANCH_NAME" == "main" ]] && docker push gcr.io/${PROJECT_ID}/linear-airbyte-source:$BUILD_ID
         [[ "$BRANCH_NAME" == "main" ]] && docker push gcr.io/${PROJECT_ID}/linear-airbyte-source:latest
