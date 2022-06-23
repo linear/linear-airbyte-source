@@ -27,7 +27,7 @@ const LINEAR_API_BASE_URL = "https://api.linear.app/export/";
  */
 export type Config = {
   // access token provided in linear airbyte integration
-  apiToken: string;
+  apiKey: string;
 };
 
 /*
@@ -197,7 +197,7 @@ export class LinearClient {
       baseURL: LINEAR_API_BASE_URL,
       url: entityType,
       headers: {
-        Authorization: this.config.apiToken,
+        Authorization: this.config.apiKey,
       },
     });
     return response.data;
