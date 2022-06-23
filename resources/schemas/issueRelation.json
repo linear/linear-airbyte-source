@@ -11,7 +11,7 @@
       "type": "string"
     },
     "archivedAt": {
-      "type": "null"
+      "type": ["null", "string"]
     },
     "type": {
       "type": "string"

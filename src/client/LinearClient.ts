@@ -20,7 +20,7 @@ import {
   WorkflowState,
 } from "./types";
 
-const LINEAR_API_BASE_URL = "https://api.linear.app/export";
+const LINEAR_API_BASE_URL = "https://api.linear.app/export/";
 
 /**
  * Linear client configuration
