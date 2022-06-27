@@ -4,16 +4,13 @@
       "type": "string"
     },
     "createdAt": {
-      "type": "string",
-      "airbyte_type": "timestamp_with_timezone"
+      "type": "string"
     },
     "updatedAt": {
-      "type": "string",
-      "airbyte_type": "timestamp_with_timezone"
+      "type": "string"
     },
     "archivedAt": {
-      "type": ["null", "string"],
-      "airbyte_type": "timestamp_with_timezone"
+      "type": ["null", "string"]
     },
     "name": {
       "type": "string"
