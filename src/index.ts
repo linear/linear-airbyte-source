@@ -59,7 +59,7 @@ class LinearSource extends AirbyteSourceBase {
   }
 
   public streams(config: AirbyteConfig): AirbyteStreamBase[] {
-    const client = new LinearClient({ apiKey: config.token });
+    const client = new LinearClient({ apiKey: config.apiKey });
     return [
       new Issue(this.logger, client),
       new Organization(this.logger, client),
