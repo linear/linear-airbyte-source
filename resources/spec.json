@@ -5,12 +5,12 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "title": "Linear Spec",
     "type": "object",
-    "required": ["token"],
+    "required": ["apiKey"],
     "additionalProperties": false,
     "properties": {
-      "token": {
+      "apiKey": {
         "type": "string",
-        "title": "Personal User API Token",
+        "title": "Airbyte Integration API Key",
         "airbyte_secret": true
       }
     }
