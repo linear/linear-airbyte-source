@@ -25,6 +25,7 @@ steps:
       - '--bootstrap'
     id: show-target-build-platforms
   - name: gcr.io/cloud-builders/docker
+    entrypoint: "/bin/bash"
     args:
       - "-c"
       - |
