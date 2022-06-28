@@ -1,30 +1,17 @@
 steps:
-  - name: gcr.io/cloud-builders/docker
-    args:
-      - run
-      - '--privileged'
-      - 'linuxkit/binfmt:v0.7'
-    id: initialize-qemu
-  - name: gcr.io/cloud-builders/docker
-    args:
-      - buildx
-      - create
-      - '--name'
-      - mybuilder
-    id: create-builder
-  - name: gcr.io/cloud-builders/docker
-    args:
-      - buildx
-      - use
-      - mybuilder
-    id: select-builder
-  - name: gcr.io/cloud-builders/docker
-    args:
-      - buildx
-      - inspect
-      - '--bootstrap'
-    id: show-target-build-platforms
-  - name: gcr.io/cloud-builders/docker
+- name: 'gcr.io/cloud-builders/docker:20.10.3'
+      args: ['run', '--privileged', 'linuxkit/binfmt:v0.7']
+      id: 'initialize-qemu'
+    - name: 'gcr.io/cloud-builders/docker:20.10.3'
+      args: ['buildx', 'create', '--name', 'mybuilder']
+      id: 'create-builder'
+    - name: 'gcr.io/cloud-builders/docker:20.10.3'
+      args: ['buildx', 'use', 'mybuilder']
+      id: 'select-builder'
+    - name: 'gcr.io/cloud-builders/docker:20.10.3'
+      args: ['buildx', 'inspect', '--bootstrap']
+      id: 'show-target-build-platforms'
+    - name: 'gcr.io/cloud-builders/docker:20.10.3'
     entrypoint: "/bin/bash"
     args:
       - "-c"
@@ -32,7 +19,7 @@ steps:
         docker pull gcr.io/${PROJECT_ID}/linear-airbyte-source:latest
         docker buildx build --platform=$_DOCKER_BUILDX_PLATFORMS -t gcr.io/${PROJECT_ID}/linear-airbyte-source:$BUILD_ID -t gcr.io/${PROJECT_ID}/linear-airbyte-source:latest --cache-from gcr.io/${PROJECT_ID}/linear-airbyte-source:latest --build-arg BUILDKIT_INLINE_CACHE=1 -f Dockerfile .
         [[ "$BRANCH_NAME" == "main" ]] && docker push gcr.io/${PROJECT_ID}/linear-airbyte-source:$BUILD_ID || true
-        [[ "$BRANCH_NAME" == "main" ]] && docker push gcr.io/${PROJECT_ID}/linear-airbyte-source:latest || true
+        docker push gcr.io/${PROJECT_ID}/linear-airbyte-source:latest
     id: build-multi-architecture-container-image
 options:
   env:

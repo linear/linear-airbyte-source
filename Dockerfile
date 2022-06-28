@@ -1,7 +1,7 @@
 FROM node:16-alpine
 
 WORKDIR /home/node/airbyte
-RUN npm install -g npm@7 tsc
+RUN npm install --location=global npm@7 tsc
 
 COPY package.json package-lock.json ./
 RUN npm install
