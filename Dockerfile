@@ -1,4 +1,4 @@
-FROM node:16-alpine
+FROM node:16-buster
 
 WORKDIR /home/node/airbyte
 RUN npm install --location=global npm@7 tsc
