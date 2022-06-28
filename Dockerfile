@@ -1,6 +1,4 @@
 FROM node:16
-RUN apt-get update
-RUN apt-get install qemu qemu-user-static binfmt-support debootstrap -y
 WORKDIR /home/node/airbyte
 RUN npm install --location=global npm@7 tsc
 
