@@ -1,4 +1,4 @@
-FROM node:16
+FROM --platform=$BUILDPLATFORM node:16
 WORKDIR /home/node/airbyte
 RUN npm install --location=global npm@7 tsc
 
