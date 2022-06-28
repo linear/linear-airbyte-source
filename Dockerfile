@@ -1,4 +1,4 @@
-FROM --platform=$TARGETPLATFORM node:16
+FROM node:16
 RUN apt-get update
 RUN apt-get install qemu qemu-user-static binfmt-support debootstrap -y
 WORKDIR /home/node/airbyte
