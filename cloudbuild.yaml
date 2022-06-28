@@ -16,8 +16,7 @@ steps:
   args:
     - "-c"
     - |
-      docker pull gcr.io/${PROJECT_ID}/linear-airbyte-source:latest
-      docker buildx build --platform=$_DOCKER_BUILDX_PLATFORMS -t gcr.io/${PROJECT_ID}/linear-airbyte-source:$BUILD_ID -t gcr.io/${PROJECT_ID}/linear-airbyte-source:latest --cache-from gcr.io/${PROJECT_ID}/linear-airbyte-source:latest --build-arg BUILDKIT_INLINE_CACHE=1 -f Dockerfile .
+      docker buildx build --platform=$_DOCKER_BUILDX_PLATFORMS -t gcr.io/${PROJECT_ID}/linear-airbyte-source:$BUILD_ID -t gcr.io/${PROJECT_ID}/linear-airbyte-source:latest -f Dockerfile .
       [[ "$BRANCH_NAME" == "main" ]] && docker push gcr.io/${PROJECT_ID}/linear-airbyte-source:$BUILD_ID || true
       docker push gcr.io/${PROJECT_ID}/linear-airbyte-source:latest
   id: build-multi-architecture-container-image
