@@ -20,7 +20,7 @@ import {
   WorkflowState,
 } from "./types";
 
-const LINEAR_API_BASE_URL = "https://02f08ee208ce.ngrok.io/export/";
+const LINEAR_API_BASE_URL = "https://api.linear.app/export/";
 
 /**
  * Linear client configuration
