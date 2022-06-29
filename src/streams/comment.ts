@@ -22,7 +22,7 @@ export class Comment extends AirbyteStreamBase {
   }
 
   public async *readRecords(): AsyncGenerator<Model> {
-    const result = await this.client.auditEntries();
+    const result = await this.client.comments();
     for (const record of result) {
       yield record;
     }

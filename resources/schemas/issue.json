@@ -105,10 +105,10 @@
       "type": ["null", "string"]
     },
     "sourceMetadata": {
-      "type": ["null", "string"]
+      "type": ["null", "object"]
     },
     "descriptionData": {
-      "type": ["null", "string"]
+      "type": ["null", "object"]
     },
     "documentVersion": {
       "type": "integer"
