@@ -193,6 +193,17 @@ export class LinearClient {
     return await this.fetchEntities<Organization>("organization");
   }
 
+  public async checkConnection(): Promise<void> {
+    await axios({
+      method: "GET",
+      baseURL: LINEAR_API_BASE_URL,
+      url: "checkConnection",
+      headers: {
+        Authorization: this.config.apiKey,
+      },
+    });
+  }
+
   private async fetchEntities<T>(entityType: EntityType): Promise<T[]> {
     const response = await axios({
       method: "GET",
