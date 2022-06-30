@@ -43,6 +43,7 @@ export type EntityType =
   | "milestone"
   | "project"
   | "projectupdate"
+  | "projectlink"
   | "issuehistory"
   | "issuelabel"
   | "issuerelation"
@@ -50,7 +51,8 @@ export type EntityType =
   | "auditentry"
   | "cycle"
   | "workflowstate"
-  | "document";
+  | "document"
+  | "comment";
 /**
  * Thin client on top of the rest export api to fetch different resources.
  */
@@ -117,7 +119,7 @@ export class LinearClient {
    * @returns List of all project links in organization.
    */
   public async projectLinks(): Promise<ProjectLink[]> {
-    return await this.fetchEntities<ProjectLink>("projectupdate");
+    return await this.fetchEntities<ProjectLink>("projectlink");
   }
 
   /**
@@ -159,7 +161,7 @@ export class LinearClient {
    * @returns List of all comments in organization.
    */
   public async comments(): Promise<Comment[]> {
-    return await this.fetchEntities<Comment>("auditentry");
+    return await this.fetchEntities<Comment>("comment");
   }
 
   /**

@@ -34,7 +34,7 @@
       ]
     },
     "bodyData": {
-      "type": "string"
+      "type": "object"
     }
   }
 
