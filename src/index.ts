@@ -51,7 +51,7 @@ class LinearSource extends AirbyteSourceBase {
   ): Promise<[boolean, VError]> {
     const client = new LinearClient({ apiKey: config.apiKey });
     try {
-      await client.organizations();
+      await client.checkConnection();
       return [true, null];
     } catch (err) {
       return [false, new VError({ cause: err as Error }, "Error", {})];
