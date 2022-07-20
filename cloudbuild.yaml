@@ -15,6 +15,19 @@ steps:
   entrypoint: "/bin/bash"
   args:
     - "-c"
+    - "-eEuo"
+    - "pipefail"
+    - |
+      apt-get update
+      apt-get install -qq -y gettext
+      envsubst < test_files/config_template.json > test_files/config.json
+      docker build -t linear-airbyte-source .
+      docker run --rm -t -v /var/run/docker.sock:/var/run/docker.sock -v /tmp:/tmp -v $(pwd):/test_input airbyte/source-acceptance-test:latest --acceptance-test-config /test_input
+  id: integration-test
+- name: 'gcr.io/cloud-builders/docker:20.10.3'
+  entrypoint: "/bin/bash"
+  args:
+    - "-c"
     - |
       [[ "$BRANCH_NAME" == "main" ]] && docker buildx build --platform=$_DOCKER_BUILDX_PLATFORMS -t gcr.io/${PROJECT_ID}/linear-airbyte-source:$BUILD_ID -t gcr.io/${PROJECT_ID}/linear-airbyte-source:latest --push -f Dockerfile . || docker buildx build --platform=$_DOCKER_BUILDX_PLATFORMS -t gcr.io/${PROJECT_ID}/linear-airbyte-source:$BUILD_ID -t gcr.io/${PROJECT_ID}/linear-airbyte-source:latest -f Dockerfile .
   id: build-multi-architecture-container-image
@@ -23,4 +36,7 @@ options:
     - DOCKER_CLI_EXPERIMENTAL=enabled
 substitutions:
   _DOCKER_BUILDX_PLATFORMS: 'linux/amd64,linux/arm64'
-  
+availableSecrets:
+  secretManager:
+    - versionName: projects/$PROJECT_ID/secrets/linear_airbyte_key/versions/latest
+      env: "LINEAR_AIRBYTE_KEY"  

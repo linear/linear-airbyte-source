@@ -16,13 +16,13 @@
       "type": "string"
     },
     "actorId": {
-      "type": "string"
+      "type": ["null", "string"]
     },
     "source": {
       "type": ["null", "string"]
     },
     "updatedDescription": {
-      "type": ["null", "string"]
+      "type": ["null", "boolean"]
     },
     "fromTitle": {
       "type": ["null", "string"]
@@ -97,13 +97,13 @@
       "type": ["null", "string"]
     },
     "relationChanges": {
-      "type": ["null", "string"]
+      "type": ["null", "array"]
     },
     "autoClosed": {
-      "type": "boolean"
+      "type": ["null", "boolean"]
     },
     "autoArchived": {
-      "type": "boolean"
+      "type": ["null", "boolean"]
     },
     "fromDueDate": {
       "type": ["null", "string"]

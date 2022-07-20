@@ -23,7 +23,7 @@
       "type": "string"
     },
     "editedAt": {
-      "type": "string"
+      "type": [ "null", "string" ]
     },
     "attachmentId": {
       "type": [ "null", "string" ]
@@ -32,7 +32,7 @@
       "type": [ "null", "object" ]
     },
     "bodyData": {
-      "type": "object"
+      "type": [ "null", "string" ]
     },
     "reactionData": {
       "type": "array",

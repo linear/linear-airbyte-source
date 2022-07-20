@@ -19,7 +19,7 @@
       "type": "string"
     },
     "logoUrl": {
-      "type": "string"
+      "type": ["null", "string"]
     },
     "periodUploadVolume": {
       "type": "integer"
