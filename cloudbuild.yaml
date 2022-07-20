@@ -22,7 +22,7 @@ steps:
       apt-get update
       apt-get install -qq -y gettext
       envsubst < test_files/config_template.json > test_files/config.json
-      docker build -t linear-airbyte-source .
+      docker build --build-arg BUILDPLATFORM=linux/amd64 -t linear-airbyte-source .
       docker run --rm -t -v /var/run/docker.sock:/var/run/docker.sock -v /tmp:/tmp -v $(pwd):/test_input airbyte/source-acceptance-test:latest --acceptance-test-config /test_input
   id: integration-test
 - name: 'gcr.io/cloud-builders/docker:20.10.3'
