@@ -13,6 +13,7 @@ steps:
   id: 'show-target-build-platforms'
 - name: 'gcr.io/cloud-builders/docker:20.10.3'
   entrypoint: "/bin/bash"
+  secretEnv: ["LINEAR_AIRBYTE_KEY"]
   args:
     - "-c"
     - "-eEuo"
