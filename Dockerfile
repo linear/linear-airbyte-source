@@ -1,4 +1,3 @@
-ARG BUILDPLATFORM
 FROM --platform=$BUILDPLATFORM node:16-alpine as builder
 WORKDIR /home/node/airbyte
 RUN npm install --location=global npm@7 tsc
