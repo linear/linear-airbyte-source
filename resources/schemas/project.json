@@ -32,11 +32,9 @@
     },
     "teamIds": {
       "type": "array",
-      "items": [
-        {
+      "items": {
           "type": "string"
-        }
-      ]
+      }
     },
     "creatorId": {
       "type": "string"
@@ -54,19 +52,19 @@
       "type": "string"
     },
     "milestoneId": {
-      "type": "string"
+      "type": ["null", "string"]
     },
     "lastProjectUpdatePromptAt": {
       "type": ["null", "string"]
     },
     "startDate": {
-      "type": "string"
+      "type": ["null", "string"]
     },
     "targetDate": {
-      "type": "string"
+      "type": ["null", "string"]
     },
     "startedAt": {
-      "type": "string"
+      "type": ["null", "string"]
     },
     "completedAt": {
       "type": ["null", "string"]
@@ -82,35 +80,27 @@
     },
     "issueCountHistory": {
       "type": "array",
-      "items": [
-        {
-          "type": "integer"
-        }
-      ]
+      "items": {
+        "type": "integer"
+      }
     },
     "completedIssueCountHistory": {
       "type": "array",
-      "items": [
-        {
-          "type": "integer"
-        }
-      ]
+      "items": {
+        "type": "integer"
+      }
     },
     "scopeHistory": {
       "type": "array",
-      "items": [
-        {
-          "type": "integer"
-        }
-      ]
+      "items": {
+        "type": "integer"
+      }
     },
     "completedScopeHistory": {
       "type": "array",
-      "items": [
-        {
-          "type": "integer"
-        }
-      ]
+      "items": {
+        "type": "integer"
+      }
     },
     "slackNewIssue": {
       "type": "boolean"

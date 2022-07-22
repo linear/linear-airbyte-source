@@ -22,13 +22,13 @@
       "type": "string"
     },
     "avatarUrl": {
-      "type": "string"
+      "type": ["null", "string"]
     },
     "disableReason": {
       "type": ["null", "string"]
     },
     "inviteHash": {
-      "type": "string"
+      "type": ["null", "string"]
     },
     "description": {
       "type": ["null", "string"]

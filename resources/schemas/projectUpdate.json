@@ -23,18 +23,16 @@
       "type": "string"
     },
     "editedAt": {
-      "type": "string"
+      "type": ["null", "string"]
     },
     "reactionData": {
       "type": "array",
-      "items": [
-        {
-          "type": "object"
-        }
-      ]
+      "items": {
+        "type": "object"
+      }      
     },
     "bodyData": {
-      "type": "object"
+      "type": ["null", "string"]
     }
   }
 

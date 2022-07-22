@@ -56,11 +56,9 @@
     },
     "labelIds": {
       "type": "array",
-      "items": [
-        {
-          "type": "string"
-        }
-      ]
+      "items": {
+        "type": "string"
+      }
     },
     "teamId": {
       "type": "string"
@@ -73,21 +71,19 @@
     },
     "subscriberIds": {
       "type": "array",
-      "items": [
-        {
-          "type": "string"
-        }
-      ]
+      "items": {
+        "type": "string"
+      }
     },
     "previousIdentifiers": {
       "type": "array",
       "items": {}
     },
     "creatorId": {
-      "type": "string"
+      "type": ["null", "string"]
     },
     "assigneeId": {
-      "type": "string"
+      "type": ["null", "string"]
     },
     "snoozedById": {
       "type": ["null", "string"]
@@ -108,7 +104,7 @@
       "type": ["null", "object"]
     },
     "descriptionData": {
-      "type": ["null", "object"]
+      "type": ["null", "string"]
     },
     "documentVersion": {
       "type": "integer"
