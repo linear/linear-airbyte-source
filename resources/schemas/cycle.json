@@ -1,5 +1,5 @@
 {
-
+  "additionalProperties": true,
   "properties": {
     "id": {
       "type": "string"
@@ -61,7 +61,7 @@
     "uncompletedIssuesUponCloseIds": {
       "type": "array",
       "items": {
-        "type": "integer"
+        "type": "string"
       }
     }
   }

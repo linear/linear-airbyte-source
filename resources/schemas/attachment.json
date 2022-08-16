@@ -1,4 +1,5 @@
 {
+  "additionalProperties": true,
   "properties": {
     "id": {
       "type": "string"
@@ -25,9 +26,6 @@
       "type": "string"
     },
     "issueId": {
-      "type": "string"
-    },
-    "organizationId": {
       "type": "string"
     },
     "metadata": {

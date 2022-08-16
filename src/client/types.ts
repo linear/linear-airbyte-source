@@ -295,7 +295,6 @@ export interface Attachment {
   url?: string;
   creatorId?: string;
   issueId?: string;
-  organizationId?: string;
   metadata?: {
     [k: string]: unknown;
   };
