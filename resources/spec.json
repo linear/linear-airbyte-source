@@ -6,7 +6,7 @@
     "title": "Linear Spec",
     "type": "object",
     "required": ["apiKey"],
-    "additionalProperties": false,
+    "additionalProperties": true,
     "properties": {
       "apiKey": {
         "type": "string",
