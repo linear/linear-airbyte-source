@@ -27,9 +27,6 @@
     "issueId": {
       "type": "string"
     },
-    "organizationId": {
-      "type": "string"
-    },
     "metadata": {
       "type": "object"
     },
