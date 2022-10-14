@@ -20,7 +20,7 @@
       "type": "string"
     },
     "sortOrder": {
-      "type": "integer"
+      "type": "number"
     }
   }
 }

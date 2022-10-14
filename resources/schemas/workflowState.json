@@ -23,7 +23,7 @@
       "type": [ "null", "string" ]
     },
     "position": {
-      "type": "integer"
+      "type": "number"
     },
     "type": {
       "type": "string"
