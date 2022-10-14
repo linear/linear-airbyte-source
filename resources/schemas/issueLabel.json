@@ -23,7 +23,7 @@
       "type": "string"
     },
     "organizationId": {
-      "type": "string"
+      "type": ["null", "string"]
     },
     "teamId": {
       "type": ["null", "string"]
