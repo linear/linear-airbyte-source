@@ -20,7 +20,6 @@ import { Document } from "./streams/document";
 import { IssueHistory } from "./streams/issueHistory";
 import { IssueLabel } from "./streams/issueLabel";
 import { IssueRelation } from "./streams/issueRelation";
-import { Milestone } from "./streams/milestone";
 import { Organization } from "./streams/organization";
 import { Project } from "./streams/project";
 import { ProjectLink } from "./streams/projectLink";
@@ -49,7 +48,7 @@ class LinearSource extends AirbyteSourceBase {
   public async checkConnection(
     config: AirbyteConfig
   ): Promise<[boolean, VError]> {
-    const client = new LinearClient({ apiKey: config.apiKey });
+    const client = new LinearClient({ apiKey: config.apiKey }, this.logger);
     try {
       await client.checkConnection();
       return [true, null];
@@ -59,7 +58,7 @@ class LinearSource extends AirbyteSourceBase {
   }
 
   public streams(config: AirbyteConfig): AirbyteStreamBase[] {
-    const client = new LinearClient({ apiKey: config.apiKey });
+    const client = new LinearClient({ apiKey: config.apiKey }, this.logger);
     return [
       new Issue(this.logger, client),
       new Organization(this.logger, client),
@@ -67,7 +66,6 @@ class LinearSource extends AirbyteSourceBase {
       new TeamKey(this.logger, client),
       new TeamMembership(this.logger, client),
       new User(this.logger, client),
-      new Milestone(this.logger, client),
       new Project(this.logger, client),
       new ProjectUpdate(this.logger, client),
       new ProjectLink(this.logger, client),
