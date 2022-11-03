@@ -218,11 +218,9 @@ export class LinearClient {
           return JSON.parse(data);
         } catch (error) {
           this.logger.error(
-            `Failed to parse data as JSON. Error: ${JSON.stringify(
-              error,
-              null,
-              2
-            )}`
+            `Failed to parse data as JSON.
+            Data:${data},
+            Error: ${JSON.stringify(error, null, 2)}`
           );
           throw error;
         }
