@@ -49,7 +49,7 @@ class LinearSource extends AirbyteSourceBase {
   public async checkConnection(
     config: AirbyteConfig
   ): Promise<[boolean, VError]> {
-    const client = new LinearClient({ apiKey: config.apiKey });
+    const client = new LinearClient({ apiKey: config.apiKey }, this.logger);
     try {
       await client.checkConnection();
       return [true, null];
@@ -59,7 +59,7 @@ class LinearSource extends AirbyteSourceBase {
   }
 
   public streams(config: AirbyteConfig): AirbyteStreamBase[] {
-    const client = new LinearClient({ apiKey: config.apiKey });
+    const client = new LinearClient({ apiKey: config.apiKey }, this.logger);
     return [
       new Issue(this.logger, client),
       new Organization(this.logger, client),

@@ -1,4 +1,5 @@
 import axios from "axios";
+import { AirbyteLogger } from "faros-airbyte-cdk/lib";
 import {
   Attachment,
   AuditEntry,
@@ -57,7 +58,10 @@ export type EntityType =
  * Thin client on top of the rest export api to fetch different resources.
  */
 export class LinearClient {
-  public constructor(private readonly config: Config) {}
+  public constructor(
+    private readonly config: Config,
+    private readonly logger: AirbyteLogger
+  ) {}
 
   /**
    * @returns List of all issues in organization.
@@ -209,6 +213,20 @@ export class LinearClient {
       method: "GET",
       baseURL: LINEAR_API_BASE_URL,
       url: entityType,
+      transformResponse: (data) => {
+        try {
+          return JSON.parse(data);
+        } catch (error) {
+          this.logger.error(
+            `Failed to parse data as JSON. Error: ${JSON.stringify(
+              error,
+              null,
+              2
+            )}`
+          );
+          throw error;
+        }
+      },
       headers: {
         Authorization: this.config.apiKey,
       },
