@@ -12,7 +12,6 @@ This Source is capable of syncing the following Streams:
 * [Organization](https://github.com/linear/linear/blob/master/packages/sdk/src/schema.graphql#L7098)
 * [Teams](https://github.com/linear/linear/blob/master/packages/sdk/src/schema.graphql#L10249)
 * [User](https://github.com/linear/linear/blob/master/packages/sdk/src/schema.graphql#L11949)
-* [Milestone](https://github.com/linear/linear/blob/master/packages/sdk/src/schema.graphql#L4205)
 * [Project](https://github.com/linear/linear/blob/master/packages/sdk/src/schema.graphql#L7667)
 * [Integration Resource](https://github.com/linear/linear/blob/master/packages/sdk/src/schema.graphql#L2297)
 * [Attachment](https://github.com/linear/linear/blob/master/packages/sdk/src/schema.graphql#L144)
