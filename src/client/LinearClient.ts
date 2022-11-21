@@ -179,6 +179,8 @@ export class LinearClient {
   }
 
   /**
+   * Dummy commit
+   *
    * @returns List of all workflow states in organization.
    */
   public async documents(): Promise<Document[]> {
