@@ -160,16 +160,6 @@ export interface IssueLabel {
   creatorId?: null | string;
 }
 
-export interface Milestone {
-  id?: string;
-  createdAt?: string;
-  updatedAt?: string;
-  archivedAt?: null | string;
-  name?: string;
-  organizationId?: string;
-  sortOrder?: number;
-}
-
 export interface Project {
   id?: string;
   createdAt?: string;
@@ -186,7 +176,6 @@ export interface Project {
   leadId?: null | string;
   memberIds?: string[];
   organizationId?: string;
-  milestoneId?: string;
   lastProjectUpdatePromptAt?: null | string;
   startDate?: string;
   targetDate?: string;

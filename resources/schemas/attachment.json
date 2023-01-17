@@ -17,13 +17,13 @@
       "type": "string"
     },
     "subtitle": {
-      "type": "string"
+      "type":["null", "string"]
     },
     "url": {
       "type": "string"
     },
     "creatorId": {
-      "type": "string"
+      "type": ["null", "string"]
     },
     "issueId": {
       "type": "string"

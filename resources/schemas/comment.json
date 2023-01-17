@@ -20,7 +20,7 @@
       "type": [ "null", "string" ]
     },
     "userId": {
-      "type": "string"
+      "type": ["null", "string"]
     },
     "editedAt": {
       "type": [ "null", "string" ]
@@ -32,7 +32,7 @@
       "type": [ "null", "object" ]
     },
     "bodyData": {
-      "type": [ "null", "string" ]
+      "type": [ "null", "string", "object" ]
     },
     "reactionData": {
       "type": "array",

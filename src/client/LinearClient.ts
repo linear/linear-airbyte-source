@@ -1,4 +1,5 @@
 import axios from "axios";
+import { AirbyteLogger } from "faros-airbyte-cdk/lib";
 import {
   Attachment,
   AuditEntry,
@@ -8,7 +9,6 @@ import {
   IssueHistory,
   IssueLabel,
   IssueRelation,
-  Milestone,
   Organization,
   Project,
   ProjectLink,
@@ -40,7 +40,6 @@ export type EntityType =
   | "teamkey"
   | "teammembership"
   | "user"
-  | "milestone"
   | "project"
   | "projectupdate"
   | "projectlink"
@@ -57,7 +56,10 @@ export type EntityType =
  * Thin client on top of the rest export api to fetch different resources.
  */
 export class LinearClient {
-  public constructor(private readonly config: Config) {}
+  public constructor(
+    private readonly config: Config,
+    protected readonly logger: AirbyteLogger
+  ) {}
 
   /**
    * @returns List of all issues in organization.
@@ -92,13 +94,6 @@ export class LinearClient {
    */
   public async teamMemberships(): Promise<TeamMembership[]> {
     return await this.fetchEntities<TeamMembership>("teammembership");
-  }
-
-  /**
-   * @returns List of all milestones in organization.
-   */
-  public async milestones(): Promise<Milestone[]> {
-    return await this.fetchEntities<Milestone>("milestone");
   }
 
   /**
