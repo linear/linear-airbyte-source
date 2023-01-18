@@ -23,7 +23,7 @@
       "type": ["null", "string"]
     },
     "icon": {
-      "type": "string"
+      "type": ["null", "string"]
     },
     "color": {
       "type": "string"
@@ -83,7 +83,7 @@
       "type": "boolean"
     },
     "defaultIssueStateId": {
-      "type": "string"
+      "type": ["null", "string"]
     },
     "defaultTemplateForMembersId": {
       "type": ["null", "string"]
@@ -101,13 +101,13 @@
       "type": ["null", "string"]
     },
     "startWorkflowStateId": {
-      "type": "string"
+      "type": ["null", "string"]
     },
     "reviewWorkflowStateId": {
       "type": ["null", "string"]
     },
     "mergeWorkflowStateId": {
-      "type": "string"
+      "type": ["null", "string"]
     },
     "groupIssueHistory": {
       "type": "boolean"
@@ -122,10 +122,10 @@
       "type": "boolean"
     },
     "autoClosePeriod": {
-      "type": "integer"
+      "type": ["null", "integer"]
     },
     "autoCloseStateId": {
-      "type": "string"
+      "type": ["null", "string"]
     },
     "autoArchivePeriod": {
       "type": "integer"

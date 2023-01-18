@@ -38,10 +38,10 @@
       "type": ["null", "string"]
     },
     "fromPriority": {
-      "type": ["null", "string"]
+      "type": ["null", "integer"]
     },
     "toPriority": {
-      "type": ["null", "string"]
+      "type": ["null", "integer"]
     },
     "fromTeamId": {
       "type": ["null", "string"]
@@ -74,16 +74,16 @@
       "type": ["null", "string"]
     },
     "fromEstimate": {
-      "type": ["null", "string"]
+      "type": ["null", "integer"]
     },
     "toEstimate": {
-      "type": ["null", "string"]
+      "type": ["null", "integer"]
     },
     "archived": {
-      "type": ["null", "string"]
+      "type": ["null", "boolean"]
     },
     "trashed": {
-      "type": ["null", "string"]
+      "type": ["null", "boolean"]
     },
     "issueImportId": {
       "type": ["null", "string"]
@@ -92,10 +92,10 @@
       "type": ["null", "string"]
     },
     "addedLabelIds": {
-      "type": ["null", "string"]
+      "type": ["null", "array"]
     },
     "removedLabelIds": {
-      "type": ["null", "string"]
+      "type": ["null", "array"]
     },
     "relationChanges": {
       "type": ["null", "array"]

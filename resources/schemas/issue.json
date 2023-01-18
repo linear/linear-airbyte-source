@@ -23,7 +23,7 @@
       "type": "integer"
     },
     "estimate": {
-      "type": ["null", "string"]
+      "type": ["null", "integer"]
     },
     "boardOrder": {
       "type": "number"
@@ -50,7 +50,7 @@
       "type": ["null", "string"]
     },
     "trashed": {
-      "type": ["null", "string"]
+      "type": ["null", "boolean"]
     },
     "snoozedUntilAt": {
       "type": ["null", "string"]
@@ -105,7 +105,7 @@
       "type": ["null", "object"]
     },
     "descriptionData": {
-      "type": ["null", "string"]
+      "type": ["null", "string", "object"]
     },
     "documentVersion": {
       "type": "integer"
