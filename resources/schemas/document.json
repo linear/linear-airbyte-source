@@ -16,9 +16,6 @@
     "title": {
       "type": "string"
     },
-    "contentData": {
-      "type": "object"
-    },
     "icon": {
       "type": ["null", "string"]
     },

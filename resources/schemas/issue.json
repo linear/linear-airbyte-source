@@ -104,9 +104,6 @@
     "sourceMetadata": {
       "type": ["null", "object"]
     },
-    "descriptionData": {
-      "type": ["null", "string", "object"]
-    },
     "documentVersion": {
       "type": "integer"
     }

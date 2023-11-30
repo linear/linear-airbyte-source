@@ -31,7 +31,6 @@ export type Issue = {
   parentId?: null | string;
   subIssueSortOrder?: null | string;
   sourceMetadata?: null | string;
-  descriptionData?: null | string;
   documentVersion?: number;
 };
 
@@ -371,13 +370,24 @@ export interface Document {
   updatedAt?: string;
   archivedAt?: null | string;
   title?: string;
-  contentData?: {
-    [k: string]: unknown;
-  };
   icon?: string;
   color?: string;
   creatorId?: string;
   updatedById?: string;
   projectId?: string;
   slugId?: string;
+}
+
+export interface DocumentContent {
+  id?: string;
+  organizationId: string;
+  content?: string;
+  contentData?: string;
+  issueId?: string;
+  projectId?: string;
+  documentId?: string;
+  projectMilestoneId?: string;
+  createdAt?: string;
+  updatedAt?: string;
+  archivedAt?: null | string;
 }
