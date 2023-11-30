@@ -16,9 +16,6 @@
     "name": {
       "type": "string"
     },
-    "description": {
-      "type": "string"
-    },
     "slugId": {
       "type": "string"
     },
