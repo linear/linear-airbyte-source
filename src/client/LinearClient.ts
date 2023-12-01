@@ -1,11 +1,11 @@
 import axios from "axios";
 import { AirbyteLogger } from "faros-airbyte-cdk/lib";
-import { DocumentContent } from "../streams/documentContent";
 import {
   Attachment,
   AuditEntry,
   Comment,
   Document,
+  DocumentContent,
   Issue,
   IssueHistory,
   IssueLabel,

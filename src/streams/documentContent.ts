@@ -1,7 +1,7 @@
 import { AirbyteLogger, AirbyteStreamBase, StreamKey } from "faros-airbyte-cdk";
 import { Dictionary } from "ts-essentials";
 import { LinearClient } from "../client/LinearClient";
-import { Document as Model } from "../client/types";
+import { DocumentContent as Model } from "../client/types";
 
 export class DocumentContent extends AirbyteStreamBase {
   public constructor(
