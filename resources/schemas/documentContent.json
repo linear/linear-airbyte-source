@@ -19,9 +19,6 @@
     "content": {
       "type": ["null", "string"]
     },
-    "contentData": {
-      "type": ["null", "object"]
-    },
     "projectId": {
       "type": ["null", "object"]
     },
