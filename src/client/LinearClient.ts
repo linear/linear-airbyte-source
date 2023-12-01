@@ -1,5 +1,6 @@
 import axios from "axios";
 import { AirbyteLogger } from "faros-airbyte-cdk/lib";
+import { DocumentContent } from "../streams/documentContent";
 import {
   Attachment,
   AuditEntry,
@@ -184,8 +185,8 @@ export class LinearClient {
   /**
    * @returns List of all document content entities in organization.
    */
-  public async documentContents(): Promise<Document[]> {
-    return await this.fetchEntities<Document>("documentcontent");
+  public async documentContents(): Promise<DocumentContent[]> {
+    return await this.fetchEntities<DocumentContent>("documentcontent");
   }
 
   /**

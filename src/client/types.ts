@@ -382,7 +382,6 @@ export interface DocumentContent {
   id?: string;
   organizationId: string;
   content?: string;
-  contentData?: string;
   issueId?: string;
   projectId?: string;
   documentId?: string;
