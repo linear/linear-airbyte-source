@@ -17,7 +17,7 @@
       "type": "string"
     },
     "description": {
-      "type": "string"
+      "type": ["null", "string"]
     },
     "slugId": {
       "type": "string"
