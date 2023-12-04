@@ -4,6 +4,9 @@
     "id": {
       "type": "string"
     },
+    "organizationId": {
+      "type": "string"
+    },
     "createdAt": {
       "type": "string"
     },
@@ -13,26 +16,20 @@
     "archivedAt": {
       "type": ["null", "string"]
     },
-    "title": {
-      "type": "string"
-    },
-    "icon": {
+    "content": {
       "type": ["null", "string"]
-    },
-    "color": {
-      "type": ["null", "string"]
-    },
-    "creatorId": {
-      "type": "string"
-    },
-    "updatedById": {
-      "type": "string"
     },
     "projectId": {
-      "type": "string"
+      "type": ["null", "object"]
     },
-    "slugId": {
-      "type": "string"
+    "issueId": {
+      "type": ["null", "object"]
+    },
+    "documentId": {
+      "type": ["null", "object"]
+    },
+    "projectMilestoneId": {
+      "type": ["null", "object"]
     }
   }
 }

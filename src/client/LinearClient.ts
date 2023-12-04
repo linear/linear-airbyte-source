@@ -5,6 +5,7 @@ import {
   AuditEntry,
   Comment,
   Document,
+  DocumentContent,
   Issue,
   IssueHistory,
   IssueLabel,
@@ -51,6 +52,7 @@ export type EntityType =
   | "cycle"
   | "workflowstate"
   | "document"
+  | "documentcontent"
   | "comment";
 /**
  * Thin client on top of the rest export api to fetch different resources.
@@ -174,10 +176,17 @@ export class LinearClient {
   }
 
   /**
-   * @returns List of all workflow states in organization.
+   * @returns List of all documents in organization.
    */
   public async documents(): Promise<Document[]> {
     return await this.fetchEntities<Document>("document");
+  }
+
+  /**
+   * @returns List of all document content entities in organization.
+   */
+  public async documentContents(): Promise<DocumentContent[]> {
+    return await this.fetchEntities<DocumentContent>("documentcontent");
   }
 
   /**
