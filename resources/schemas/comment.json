@@ -32,7 +32,7 @@
       "type": [ "null", "object" ]
     },
     "bodyData": {
-      "type": [ "null", "string", "object" ]
+      "type": [ "null", "string" ]
     },
     "reactionData": {
       "type": "array",
