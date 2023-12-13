@@ -326,7 +326,7 @@ export interface Comment {
   sourceMetadata?: null | {
     [k: string]: unknown;
   };
-  bodyData?: unknown;
+  bodyData?: string;
   reactionData?: {
     [k: string]: unknown;
   }[];
