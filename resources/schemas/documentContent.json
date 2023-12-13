@@ -20,16 +20,16 @@
       "type": ["null", "string"]
     },
     "projectId": {
-      "type": ["null", "object"]
+      "type": ["null", "string"]
     },
     "issueId": {
-      "type": ["null", "object"]
+      "type": ["null", "string"]
     },
     "documentId": {
-      "type": ["null", "object"]
+      "type": ["null", "string"]
     },
     "projectMilestoneId": {
-      "type": ["null", "object"]
+      "type": ["null", "string"]
     }
   }
 }
