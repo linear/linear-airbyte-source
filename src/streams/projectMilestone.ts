@@ -12,7 +12,7 @@ export class ProjectMilestone extends AirbyteStreamBase {
   }
 
   public getJsonSchema(): Dictionary<unknown> {
-    return require("../../resources/schemas/projectLink.json");
+    return require("../../resources/schemas/projectMilestone.json");
   }
   public get primaryKey(): StreamKey {
     return ["id"];
