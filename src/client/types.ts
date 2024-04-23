@@ -203,6 +203,15 @@ export interface ProjectLink {
   projectId?: string;
 }
 
+export interface ProjectMilestone {
+  id?: string;
+  createdAt?: string;
+  updatedAt?: string;
+  archivedAt?: null | string;
+  targetDate?: null | string;
+  projectId?: string;
+}
+
 export interface ProjectUpdate {
   id?: string;
   createdAt?: string;
