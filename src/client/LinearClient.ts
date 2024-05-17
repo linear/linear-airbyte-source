@@ -14,6 +14,7 @@ import {
   Project,
   ProjectLink,
   ProjectMilestone,
+  ProjectStatus,
   ProjectUpdate,
   Team,
   TeamKey,
@@ -43,6 +44,7 @@ export type EntityType =
   | "teammembership"
   | "user"
   | "project"
+  | "projectstatus"
   | "projectupdate"
   | "projectlink"
   | "projectmilestone"
@@ -105,6 +107,13 @@ export class LinearClient {
    */
   public async projects(): Promise<Project[]> {
     return await this.fetchEntities<Project>("project");
+  }
+
+  /**
+   * @returns List of all projects in organization.
+   */
+  public async projectStatuses(): Promise<ProjectStatus[]> {
+    return await this.fetchEntities<ProjectStatus>("projectstatus");
   }
 
   /**

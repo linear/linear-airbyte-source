@@ -1,0 +1,38 @@
+{
+  "additionalProperties": true,
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "organizationId": {
+      "type": "string"
+    },
+    "createdAt": {
+      "type": "string"
+    },
+    "updatedAt": {
+      "type": "string"
+    },
+    "archivedAt": {
+      "type": [ "null", "string" ]
+    },
+    "name": {
+      "type": "string"
+    },
+    "color": {
+      "type": "string"
+    },
+    "description": {
+      "type": [ "null", "string" ]
+    },
+    "position": {
+      "type": "number"
+    },
+    "type": {
+      "type": "string"
+    },
+    "indefinite": {
+      "type": "boolean"
+    }
+  }
+}
