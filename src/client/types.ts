@@ -161,6 +161,7 @@ export interface IssueLabel {
 
 export interface Project {
   id?: string;
+  statusId?: string;
   createdAt?: string;
   updatedAt?: string;
   archivedAt?: null | string;
@@ -371,6 +372,20 @@ export interface WorkflowState {
   position?: number;
   type?: string;
   teamId?: string;
+}
+
+export interface ProjectStatus {
+  id?: string;
+  createdAt?: string;
+  updatedAt?: string;
+  archivedAt?: null | string;
+  name?: string;
+  color?: string;
+  description?: null | string;
+  position?: number;
+  type?: string;
+  organizationId?: string;
+  indefinite?: boolean;
 }
 
 export interface Document {

@@ -4,6 +4,9 @@
     "id": {
       "type": "string"
     },
+    "statusId": {
+      "type": "string"
+    },
     "createdAt": {
       "type": "string"
     },
