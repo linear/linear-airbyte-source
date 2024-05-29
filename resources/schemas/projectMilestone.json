@@ -4,6 +4,9 @@
     "id": {
       "type": "string"
     },
+    "name": {
+      "type": "string"
+    },
     "createdAt": {
       "type": "string"
     },

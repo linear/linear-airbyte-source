@@ -205,6 +205,7 @@ export interface ProjectLink {
 }
 
 export interface ProjectMilestone {
+  name?: string;
   id?: string;
   createdAt?: string;
   updatedAt?: string;
