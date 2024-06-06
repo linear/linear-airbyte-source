@@ -214,6 +214,24 @@ export interface ProjectMilestone {
   projectId?: string;
 }
 
+export interface Initiative {
+  name?: string;
+  id?: string;
+  slugId?: string;
+  createdAt?: string;
+  updatedAt?: string;
+  archivedAt?: null | string;
+  targetDate?: null | string;
+  targetDateResolution?: null | string;
+  icon?: null | string;
+  color?: null | string;
+  description?: null | string;
+  creatorId?: null | string;
+  ownerId?: null | string;
+  organizationId?: string;
+  status?: string;
+}
+
 export interface ProjectUpdate {
   id?: string;
   createdAt?: string;

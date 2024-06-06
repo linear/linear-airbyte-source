@@ -1,0 +1,50 @@
+{
+  "additionalProperties": true,
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "organizationId": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": ["string", "null"]
+    },
+    "createdAt": {
+      "type": "string"
+    },
+    "updatedAt": {
+      "type": "string"
+    },
+    "archivedAt": {
+      "type": ["null", "string"]
+    },
+    "creatorId": {
+      "type": "string"
+    },
+    "slugId": {
+      "type": "string"
+    },
+    "ownerId": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "icon": {
+      "type": ["null", "string"]
+    },
+    "color": {
+      "type": ["null", "string"]
+    },
+    "targetDate": {
+      "type": ["null", "string"]
+    },
+    "targetDateResolution": {
+      "type": ["null", "string"]
+    }
+  }
+}
