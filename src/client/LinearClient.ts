@@ -206,7 +206,7 @@ export class LinearClient {
    * @returns List of all initiatives in organization.
    */
   public async initiatives(): Promise<Initiative[]> {
-    return await this.fetchEntities<Document>("initiative");
+    return await this.fetchEntities<Initiative>("initiative");
   }
 
   /**
