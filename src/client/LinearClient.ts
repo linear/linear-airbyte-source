@@ -7,6 +7,7 @@ import {
   Document,
   DocumentContent,
   Initiative,
+  InitiativeToProject,
   Issue,
   IssueHistory,
   IssueLabel,
@@ -50,6 +51,7 @@ export type EntityType =
   | "projectlink"
   | "projectmilestone"
   | "initiative"
+  | "initiativetoproject"
   | "issuehistory"
   | "issuelabel"
   | "issuerelation"
@@ -207,6 +209,13 @@ export class LinearClient {
    */
   public async initiatives(): Promise<Initiative[]> {
     return await this.fetchEntities<Initiative>("initiative");
+  }
+
+  /**
+   * @returns List of all initiative to project relations in organization.
+   */
+  public async initiativeToProject(): Promise<InitiativeToProject[]> {
+    return await this.fetchEntities<InitiativeToProject>("initiativetoproject");
   }
 
   /**

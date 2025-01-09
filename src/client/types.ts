@@ -232,6 +232,15 @@ export interface Initiative {
   status?: string;
 }
 
+export interface InitiativeToProject {
+  id?: string;
+  createdAt?: string;
+  updatedAt?: string;
+  archivedAt?: null | string;
+  initiativeId?: string;
+  projectId?: string;
+}
+
 export interface ProjectUpdate {
   id?: string;
   createdAt?: string;

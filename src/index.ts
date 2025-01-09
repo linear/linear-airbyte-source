@@ -33,6 +33,7 @@ import { DocumentContent } from "./streams/documentContent";
 import { ProjectMilestone } from "./streams/projectMilestone";
 import { ProjectStatus } from "./streams/projectStatus";
 import { Initiative } from "./streams/initiative";
+import { InitiativeToProject } from "./streams/initiativeToProject";
 
 /** The main entry point. */
 export function mainCommand(): Command {
@@ -70,6 +71,7 @@ class LinearSource extends AirbyteSourceBase {
       new TeamKey(this.logger, client),
       new TeamMembership(this.logger, client),
       new Initiative(this.logger, client),
+      new InitiativeToProject(this.logger, client),
       new User(this.logger, client),
       new Project(this.logger, client),
       new ProjectStatus(this.logger, client),

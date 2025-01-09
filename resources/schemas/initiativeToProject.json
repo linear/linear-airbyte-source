@@ -1,0 +1,23 @@
+{
+  "additionalProperties": true,
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "createdAt": {
+      "type": "string"
+    },
+    "updatedAt": {
+      "type": "string"
+    },
+    "archivedAt": {
+      "type": ["null", "string"]
+    },
+    "projectId": {
+      "type": "string"
+    },
+    "initiativeId": {
+      "type": "string"
+    }
+  }
+}
