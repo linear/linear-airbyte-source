@@ -11,33 +11,42 @@
       "type": "string"
     },
     "archivedAt": {
-      "type": [ "null", "string" ]
+      "type": ["null", "string"]
+    },
+    "resolvedAt": {
+      "type": ["null", "string"]
     },
     "issueId": {
       "type": "string"
     },
+    "resolvingCommentId": {
+      "type": ["null", "string"]
+    },
+    "resolvingUserId": {
+      "type": ["null", "string"]
+    },
     "parentId": {
-      "type": [ "null", "string" ]
+      "type": ["null", "string"]
     },
     "userId": {
       "type": ["null", "string"]
     },
     "editedAt": {
-      "type": [ "null", "string" ]
+      "type": ["null", "string"]
     },
     "attachmentId": {
-      "type": [ "null", "string" ]
+      "type": ["null", "string"]
     },
     "sourceMetadata": {
-      "type": [ "null", "object" ]
+      "type": ["null", "object"]
     },
     "bodyData": {
-      "type": [ "null", "string" ]
+      "type": ["null", "string"]
     },
     "reactionData": {
       "type": "array",
       "items": {
-        "type": "object" 
+        "type": "object"
       }
     }
   }

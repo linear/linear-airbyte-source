@@ -21,6 +21,7 @@ export type Issue = {
   teamId: string;
   cycleId?: null | string;
   projectId?: null | string;
+  projectMilestoneId?: null | string;
   subscriberIds?: string[];
   previousIdentifiers?: string[];
   creatorId: string;
@@ -193,17 +194,6 @@ export interface Project {
   slackIssueStatuses?: boolean;
 }
 
-export interface ProjectLink {
-  id?: string;
-  createdAt?: string;
-  updatedAt?: string;
-  archivedAt?: null | string;
-  url?: string;
-  label?: string;
-  creatorId?: string;
-  projectId?: string;
-}
-
 export interface ProjectMilestone {
   name?: string;
   id?: string;
@@ -356,9 +346,12 @@ export interface Comment {
   createdAt?: string;
   updatedAt?: string;
   archivedAt?: null | string;
+  resolvedAt?: null | string;
   issueId?: string;
   parentId?: null | string;
   userId?: string;
+  resolvingUserId?: null | string;
+  resolvingCommentId?: null | string;
   editedAt?: string;
   attachmentId?: null | string;
   sourceMetadata?: null | {
