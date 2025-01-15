@@ -194,17 +194,6 @@ export interface Project {
   slackIssueStatuses?: boolean;
 }
 
-export interface ProjectLink {
-  id?: string;
-  createdAt?: string;
-  updatedAt?: string;
-  archivedAt?: null | string;
-  url?: string;
-  label?: string;
-  creatorId?: string;
-  projectId?: string;
-}
-
 export interface ProjectMilestone {
   name?: string;
   id?: string;

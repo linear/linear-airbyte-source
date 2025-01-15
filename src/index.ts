@@ -22,7 +22,6 @@ import { IssueLabel } from "./streams/issueLabel";
 import { IssueRelation } from "./streams/issueRelation";
 import { Organization } from "./streams/organization";
 import { Project } from "./streams/project";
-import { ProjectLink } from "./streams/projectLink";
 import { ProjectUpdate } from "./streams/projectUpdate";
 import { Team } from "./streams/team";
 import { TeamKey } from "./streams/teamKey";
@@ -76,7 +75,6 @@ class LinearSource extends AirbyteSourceBase {
       new Project(this.logger, client),
       new ProjectStatus(this.logger, client),
       new ProjectUpdate(this.logger, client),
-      new ProjectLink(this.logger, client),
       new ProjectMilestone(this.logger, client),
       new IssueHistory(this.logger, client),
       new IssueLabel(this.logger, client),
