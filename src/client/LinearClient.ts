@@ -6,6 +6,7 @@ import {
   Comment,
   Document,
   DocumentContent,
+  EntityExternalLink,
   Initiative,
   InitiativeToProject,
   Issue,
@@ -44,6 +45,7 @@ export type EntityType =
   | "teamkey"
   | "teammembership"
   | "user"
+  | "entityexternallink"
   | "project"
   | "projectstatus"
   | "projectupdate"
@@ -130,6 +132,12 @@ export class LinearClient {
    */
   public async projectMilestones(): Promise<ProjectMilestone[]> {
     return await this.fetchEntities<ProjectMilestone>("projectmilestone");
+  }
+  /**
+   * @returns List of all project links in organization.
+   */
+  public async entityExternalLinks(): Promise<EntityExternalLink[]> {
+    return await this.fetchEntities<EntityExternalLink>("entityexternallink");
   }
 
   /**
