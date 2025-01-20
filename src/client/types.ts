@@ -231,6 +231,18 @@ export interface InitiativeToProject {
   projectId?: string;
 }
 
+export interface EntityExternalLink {
+  id?: string;
+  createdAt?: string;
+  updatedAt?: string;
+  archivedAt?: null | string;
+  url?: string;
+  label?: string;
+  creatorId?: string;
+  projectId?: string;
+  initiativeId?: string;
+}
+
 export interface ProjectUpdate {
   id?: string;
   createdAt?: string;
