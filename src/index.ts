@@ -25,7 +25,7 @@ import { Project } from "./streams/project";
 import { ProjectUpdate } from "./streams/projectUpdate";
 import { Team } from "./streams/team";
 import { TeamKey } from "./streams/teamKey";
-import { TeamMembership } from "./streams/teamMemebership";
+import { TeamMembership } from "./streams/teamMembership";
 import { User } from "./streams/user";
 import { WorkflowState } from "./streams/workflowState";
 import { DocumentContent } from "./streams/documentContent";
