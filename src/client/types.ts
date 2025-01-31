@@ -447,3 +447,33 @@ export interface DocumentContent {
   updatedAt?: string;
   archivedAt?: null | string;
 }
+
+export interface Customer {
+  id?: string;
+  createdAt: string;
+  updatedAt: string;
+  archivedAt?: null | string;
+  organizationId: string;
+  name: string;
+  domains: string[];
+  externalIds: string[];
+  statusId: string;
+  tierId?: string;
+  logoUrl?: string;
+  slackChannelId?: string;
+  slugId: string;
+  revenue?: number;
+  size?: number;
+}
+
+export interface CustomerNeed {
+  id: string;
+  createdAt: string;
+  updatedAt: string;
+  archivedAt?: null | string;
+  organizationId: string;
+  customerId?: string;
+  issueId?: string;
+  projectId?: string;
+  attachmentId?: string;
+}

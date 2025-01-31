@@ -4,6 +4,8 @@ import {
   Attachment,
   AuditEntry,
   Comment,
+  Customer,
+  CustomerNeed,
   Document,
   DocumentContent,
   EntityExternalLink,
@@ -61,7 +63,9 @@ export type EntityType =
   | "workflowstate"
   | "document"
   | "documentcontent"
-  | "comment";
+  | "comment"
+  | "customer"
+  | "customerneed";
 /**
  * Thin client on top of the rest export api to fetch different resources.
  */
@@ -222,6 +226,20 @@ export class LinearClient {
    */
   public async documentContents(): Promise<DocumentContent[]> {
     return await this.fetchEntities<DocumentContent>("documentcontent");
+  }
+
+  /**
+   * @returns List of all Customer entities in organization.
+   */
+  public async customer(): Promise<Customer[]> {
+    return await this.fetchEntities<Customer>("customer");
+  }
+
+  /**
+   * @returns List of all CustomerNeed entities in organization.
+   */
+  public async customerNeed(): Promise<CustomerNeed[]> {
+    return await this.fetchEntities<CustomerNeed>("customerneed");
   }
 
   /**
