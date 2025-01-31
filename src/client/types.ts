@@ -361,7 +361,7 @@ export interface Comment {
   resolvedAt?: null | string;
   issueId?: string;
   parentId?: null | string;
-  userId?: string;
+  userId?: null | string;
   resolvingUserId?: null | string;
   resolvingCommentId?: null | string;
   editedAt?: string;
@@ -431,7 +431,7 @@ export interface Document {
   color?: string;
   creatorId?: string;
   updatedById?: string;
-  projectId?: string;
+  projectId?: null | string;
   slugId?: string;
 }
 
