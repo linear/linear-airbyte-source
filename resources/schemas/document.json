@@ -29,7 +29,7 @@
       "type": "string"
     },
     "projectId": {
-      "type": "string"
+      "type": ["null", "string"]
     },
     "slugId": {
       "type": "string"

@@ -17,7 +17,7 @@
       "type": ["null", "string"]
     },
     "issueId": {
-      "type": "string"
+      "type": ["null", "string"]
     },
     "resolvingCommentId": {
       "type": ["null", "string"]
