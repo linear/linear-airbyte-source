@@ -34,6 +34,8 @@ import { ProjectStatus } from "./streams/projectStatus";
 import { Initiative } from "./streams/initiative";
 import { InitiativeToProject } from "./streams/initiativeToProject";
 import { EntityExternalLink } from "./streams/entityExternalLink";
+import { Customer } from "./streams/customer";
+import { CustomerNeed } from "./streams/customerNeed";
 
 /** The main entry point. */
 export function mainCommand(): Command {
@@ -88,6 +90,8 @@ class LinearSource extends AirbyteSourceBase {
       new WorkflowState(this.logger, client),
       new Document(this.logger, client),
       new DocumentContent(this.logger, client),
+      new Customer(this.logger, client),
+      new CustomerNeed(this.logger, client),
     ];
   }
 }

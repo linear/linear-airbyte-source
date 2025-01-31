@@ -1,0 +1,56 @@
+{
+  "additionalProperties": true,
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "createdAt": {
+      "type": "string"
+    },
+    "updatedAt": {
+      "type": "string"
+    },
+    "archivedAt": {
+      "type": [ "null", "string" ]
+    },
+    "organizationId": {
+      "type": "string"
+    },
+    "domains": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "externalIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "name": {
+      "type": "string"
+    },
+    "logoUrl": {
+      "type": [ "null", "string" ]
+    },
+    "slugId": {
+      "type": "string"
+    },
+    "statusId": {
+      "type": "string"
+    },
+    "tierId": {
+      "type": [ "null", "string" ]
+    },
+    "slackChannelId": {
+      "type": [ "null", "string" ]
+    },
+    "revenue": {
+      "type": [ "null", "integer" ]
+    },
+    "size": {
+      "type": [ "null", "integer" ]
+    }
+  }
+}
