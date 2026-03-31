@@ -160,6 +160,17 @@ export interface IssueLabel {
   creatorId?: null | string;
 }
 
+export interface ProjectLabel {
+  id?: string;
+  createdAt?: string;
+  updatedAt?: string;
+  archivedAt?: null | string;
+  name?: string;
+  description?: null | string;
+  color?: string;
+  creatorId?: null | string;
+}
+
 export interface Project {
   id?: string;
   statusId?: string;
