@@ -1,0 +1,29 @@
+{
+  "additionalProperties": true,
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "createdAt": {
+      "type": "string"
+    },
+    "updatedAt": {
+      "type": "string"
+    },
+    "archivedAt": {
+      "type": ["null", "string"]
+    },
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": ["null", "string"]
+    },
+    "color": {
+      "type": "string"
+    },
+    "creatorId": {
+      "type": ["null", "string"]
+    }
+  }
+}

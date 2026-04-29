@@ -17,6 +17,7 @@ import {
   IssueRelation,
   Organization,
   Project,
+  ProjectLabel,
   ProjectMilestone,
   ProjectStatus,
   ProjectUpdate,
@@ -65,7 +66,8 @@ export type EntityType =
   | "documentcontent"
   | "comment"
   | "customer"
-  | "customerneed";
+  | "customerneed"
+  | "projectlabel";
 /**
  * Thin client on top of the rest export api to fetch different resources.
  */
@@ -129,6 +131,13 @@ export class LinearClient {
    */
   public async projectUpdates(): Promise<ProjectUpdate[]> {
     return await this.fetchEntities<ProjectUpdate>("projectupdate");
+  }
+
+  /**
+   * @returns List of all project labels in organization.
+   */
+  public async projectLabels(): Promise<ProjectLabel[]> {
+    return await this.fetchEntities<ProjectLabel>("projectlabel");
   }
 
   /**
